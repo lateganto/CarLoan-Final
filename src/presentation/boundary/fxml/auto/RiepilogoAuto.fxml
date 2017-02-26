@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="secondPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="620.0" spacing="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.boundary.controller.RiepilogoAutoController">
+   <children>
+      <FlowPane alignment="CENTER_RIGHT" columnHalignment="RIGHT" hgap="10.0" prefWrapLength="260.0">
+         <children>
+            <TextField promptText="Cerca Auto">
+               <tooltip>
+                  <Tooltip text="Inserisci il criterio, quindi premi Cerca." />
+               </tooltip>
+               <FlowPane.margin>
+                  <Insets />
+               </FlowPane.margin>
+            </TextField>
+            <Button alignment="CENTER_RIGHT" mnemonicParsing="false" text="Cerca">
+               <graphic>
+                  <ImageView fitHeight="12.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/search.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <FlowPane.margin>
+                  <Insets right="10.0" />
+               </FlowPane.margin>
+            </Button>
+         </children>
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin>
+      </FlowPane>
+      <ToolBar>
+         <items>
+            <Button disable="true" mnemonicParsing="false" text="Nuovo" />
+            <Button disable="true" mnemonicParsing="false" text="Rimuovi" />
+            <Button mnemonicParsing="false" text="Modifica" />
+            <Separator orientation="VERTICAL">
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </Separator>
+            <Button mnemonicParsing="false" text="Mostra Dettagli" />
+         </items>
+      </ToolBar>
+      <TableView maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" />
+         </VBox.margin>
+         <columns>
+            <TableColumn minWidth="20.0" prefWidth="120.0" text="ID" />
+            <TableColumn minWidth="20.0" prefWidth="150.0" text="Targa" />
+            <TableColumn minWidth="20.0" prefWidth="110.0" text="Marca" />
+            <TableColumn minWidth="20.0" prefWidth="130.0" text="Modello" />
+            <TableColumn minWidth="20.0" prefWidth="150.0" text="Stato" />
+            <TableColumn minWidth="20.0" prefWidth="130.0" text="Categoria" />
+         </columns>
+      </TableView>
+   </children>
+</VBox>

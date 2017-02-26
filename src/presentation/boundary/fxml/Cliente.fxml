@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.boundary.controller.ControllerCliente">
+   <children>
+      <FlowPane alignment="CENTER" maxHeight="-Infinity" prefHeight="60.0" style="-fx-background-color: #212121;">
+         <children>
+            <Text fx:id="titolo" fill="WHITESMOKE" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Titolo">
+               <font>
+                  <Font size="28.0" />
+               </font>
+               <FlowPane.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </FlowPane.margin>
+            </Text>
+         </children>
+      </FlowPane>
+      <GridPane>
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" prefWidth="50.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="300.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="60.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="300.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="50.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints prefHeight="40.0" vgrow="SOMETIMES" />
+          <RowConstraints prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="40.0" vgrow="SOMETIMES" />
+          <RowConstraints prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="40.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Nome" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Label text="Cognome" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <TextField fx:id="nomeTextField" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets left="130.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="cognomeTextField" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets left="130.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Codice Fiscale" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="codiceFiscaleTextField" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="130.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Tipo Documento" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <ChoiceBox fx:id="tipoDocumentoChoiceBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+            <Label text="Numero Documento" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="nrDocumentoTextField" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="150.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Citta" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField fx:id="cittaTextField" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets left="130.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Indirizzo" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <TextField fx:id="indirizzoTextField" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets left="130.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Telefono" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <TextField fx:id="telefonoTextField" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="130.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="E-mail" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <TextField fx:id="emailTextField" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="130.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Numero Patente" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <TextField fx:id="nrPatenteTextField" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="130.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Data Rilascio" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <DatePicker fx:id="dataRilascioDatePicker" prefWidth="170.0" promptText="gg/mm/aaaa" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
+            <Label text="N. Carta di Credito" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+            <TextField fx:id="nrCartaTextField" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets left="130.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Intestatario Carta" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+            <TextField fx:id="intCartaTextField" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets left="130.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Anagrafica" textFill="#2379c6" GridPane.columnIndex="1" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
+            <Label text="Recapiti" textFill="#2379c6" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Separator prefWidth="200.0" GridPane.columnIndex="3" GridPane.valignment="BOTTOM" />
+
+            <Label text="ID Cliente" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="idTextField" editable="false" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="130.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Patente" textFill="#2379c6" GridPane.columnIndex="3" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Separator prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
+            <Label text="Dati Pagamento" textFill="#2379c6" GridPane.columnIndex="3" GridPane.rowIndex="6" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Separator prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="6" GridPane.valignment="BOTTOM" />
+            <Separator prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3" GridPane.valignment="TOP" />
+            <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="9" GridPane.valignment="TOP" />
+            <Separator prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="9" GridPane.valignment="TOP" />
+            <Separator prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="6" GridPane.valignment="TOP" />
+         </children>
+      </GridPane>
+      <Separator prefWidth="200.0" />
+      <HBox alignment="CENTER_RIGHT" prefHeight="80.0" spacing="10.0">
+         <children>
+            <Button fx:id="modificaButton" cancelButton="true" mnemonicParsing="false" onAction="#onModify" text="Modifica">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Separator fx:id="separator" maxHeight="50.0" orientation="VERTICAL">
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+            </Separator>
+            <Button fx:id="annullaButton" cancelButton="true" mnemonicParsing="false" onAction="#onAnnulla" text="Annulla">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="confermaButton" defaultButton="true" mnemonicParsing="false" onAction="#onConferma" text="Conferma">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="5.0" right="30.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>

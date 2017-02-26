@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<queries>
+
+    <regex id="regex">[?]</regex>
+
+    <query id="utente">
+        <insert>INSERT INTO utenti VALUES(DEFAULT, '?', '?', '?')</insert>
+        <read>SELECT id_utente, username, tipo FROM utenti WHERE id_utente = '?'</read>
+        <!-- UPDATE ONLY PASSWORD FOR USERS !-->
+        <update>UPDATE utenti SET password = '?' WHERE id_utente = '?'</update>
+        <delete>DELETE FROM utenti WHERE id_utente = '?'</delete>
+        <readall>SELECT id_utente, username, tipo FROM utenti</readall>
+        <find>SELECT id_utente, username, tipo FROM utenti WHERE username LIKE '%?%' OR tipo LIKE '%?%'</find>
+
+        <login>SELECT id_utente, username, tipo FROM utenti WHERE username = '?' AND password = '?'</login>
+    </query>
+
+    <query id="admin_agenzia">
+        <insert>INSERT INTO admin_agenzia VALUES(DEFAULT, '?', '?', '?', '?', '?', '?', '?', '?')</insert>
+        <read>SELECT id_adag, nome, cognome, email, telefono, citta, indirizzo, codice_fiscale, agenzia FROM admin_agenzia WHERE id_adag = '?'</read>
+        <update>UPDATE admin_agenzia SET nome = '?', cognome = '?', email = '?', telefono = '?', citta = '?', indirizzo = '?', codice_fiscale = '?', agenzia = '?' WHERE id_adag = '?'</update>
+        <delete>DELETE FROM admin_agenzia WHERE id_adag = '?'</delete>
+        <readall>SELECT id_adag, nome, cognome, email, telefono, citta, indirizzo, codice_fiscale, agenzia FROM admin_agenzia</readall>
+        <find>SELECT id_adag, nome, cognome, email, telefono, citta, indirizzo, codice_fiscale, agenzia FROM admin_agenzia WHERE nome LIKE '%?%' OR cognome LIKE '%?%' OR codice_fiscale LIKE '%?%'</find>
+    </query>
+
+    <query id="admin_sistema">
+        <insert>INSERT INTO admin_agenzia VALUES(DEFAULT, '?', '?', '?', '?', '?', '?', '?')</insert>
+        <read>SELECT id_adag, nome, cognome, email, telefono, citta, indirizzo, codice_fiscale FROM admin_sistema WHERE id_adsis = '?'</read>
+        <update>UPDATE admin_sistema SET nome = '?', cognome = '?', email = '?', telefono = '?', citta = '?', indirizzo = '?', codice_fiscale = '?' WHERE id_adsis = '?'</update>
+        <delete>DELETE FROM admin_sistema WHERE id_adsis = '?'</delete>
+        <readall>SELECT id_adsis, nome, cognome, email, telefono, citta, indirizzo, codice_fiscale FROM admin_sistema</readall>
+        <find>SELECT id_adsis, nome, cognome, email, telefono, citta, indirizzo, codice_fiscale FROM admin_sistema WHERE nome LIKE '%?%' OR cognome LIKE '%?%' OR codice_fiscale LIKE '%?%'</find>
+    </query>
+
+    <query id="agenzia">
+        <insert>INSERT INTO agenzie VALUES(DEFAULT, '?', '?', '?', '?')</insert>
+        <read>SELECT id_agenzia, citta, indirizzo, email, telefono FROM agenzie WHERE id_agenzia = '?'</read>
+        <update>UPDATE agenzie SET citta = '?', indirizzo = '?', email = '?', telefono = '?' WHERE id_agenzia = '?'</update>
+        <delete>DELETE FROM agenzie WHERE id_agenzia = '?'</delete>
+        <readall>SELECT id_agenzia, citta, indirizzo, email, telefono FROM agenzie</readall>
+        <find>SELECT id_agenzia, citta, indirizzo, email, telefono FROM agenzie WHERE citta LIKE '%?%' OR email LIKE '%?%'</find>
+    </query>
+
+    <query id="auto">
+        <insert>INSERT INTO auto VALUES(DEFAULT, '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')</insert>
+        <read>SELECT id_auto, targa, marca, modello, classe_emissioni, scadenza_polizza, scadenza_revisione, stato, cilindrata, numero_porte, potenza, alimentazione, numero_posti, fascia, agenzia, note, cambio, chilometri, carburante FROM auto WHERE id_auto = '?'</read>
+        <update>UPDATE auto SET targa = '?', marca = '?', modello = '?', classe_emissioni = '?', scadenza_polizza = '?', scadenza_revisione = '?', stato = '?', cilindrata = '?', numero_porte = '?', potenza = '?', alimentazione = '?', numero_posti = '?', fascia = '?', agenzia = '?', note = '?', cambio = '?', chilometri = '?', carburante = '?' WHERE id_auto = '?'</update>
+        <delete>DELETE FROM auto WHERE id_auto = '?'</delete>
+        <readall>SELECT id_auto, targa, marca, modello, classe_emissioni, scadenza_polizza, scadenza_revisione, stato, cilindrata, numero_porte, potenza, alimentazione, numero_posti, fascia, agenzia, note, cambio, chilometri, carburante FROM auto</readall>
+        <find>SELECT id_auto, targa, marca, modello, classe_emissioni, scadenza_polizza, scadenza_revisione, stato, cilindrata, numero_porte, potenza, alimentazione, numero_posti, fascia, agenzia, note, cambio, chilometri, carburante FROM auto WHERE targa LIKE '%?%' OR marca LIKE '%?%' OR modello LIKE '%?%'</find>
+        <readall_agenzia>SELECT id_auto, targa, marca, modello, classe_emissioni, scadenza_polizza, scadenza_revisione, stato, cilindrata, numero_porte, potenza, alimentazione, numero_posti, fascia, agenzia, note, cambio, chilometri, carburante FROM auto WHERE agenzia = '?' AND stato = '?'</readall_agenzia>
+    </query>
+
+    <query id="carta_credito">
+        <insert>INSERT INTO carte_credito VALUES(DEFAULT, '?', '?', '?')</insert>
+        <read>SELECT id_carta, numero, intestatario, scadenza FROM carte_credito WHERE id_carta = '?'</read>
+        <update>UPDATE carte_credito SET numero = '?', intestatario = '?', scadenza = '?' WHERE id_carta = '?' </update>
+        <delete>DELETE FROM carte_credito WHERE id_carta = '?'</delete>
+        <readall>SELECT id_carta, numero, intestatario, scadenza FROM carte_credito</readall>
+        <find>SELECT id_carta, numero, intestatario, scadenza FROM carte_credito WHERE intestatario LIKE '%?%'</find>
+    </query>
+
+    <query id="cliente">
+        <insert>INSERT INTO clienti VALUES(DEFAULT, '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')</insert>
+        <read>SELECT id_cliente, nome, cognome, email, telefono, citta, indirizzo, codice_fiscale, numero_documento, tipo_documento, numero_patente, data_rilascio_patente, carta_credito, intestatario_carta FROM clienti WHERE id_cliente = '?'</read>
+        <update>UPDATE clienti SET nome = '?', cognome = '?', numero_documento = '?', tipo_documento = '?', citta = '?', indirizzo = '?', telefono = '?', email = '?', numero_patente = '?', data_rilascio_patente = '?', codice_fiscale = '?', carta_credito  = '?', intestatario_carta = '?' WHERE id_cliente = '?'</update>
+        <delete>DELETE FROM clienti WHERE id_cliente = '?'</delete>
+        <readall>SELECT id_cliente, nome, cognome, email, telefono, citta, indirizzo, codice_fiscale, numero_documento, tipo_documento, numero_patente, data_rilascio_patente, carta_credito, intestatario_carta FROM clienti</readall>
+        <find>SELECT id_cliente, nome, cognome, email, telefono, citta, indirizzo, codice_fiscale, numero_documento, tipo_documento, numero_patente, data_rilascio_patente, carta_credito, intestatario_carta FROM clienti WHERE nome LIKE '%?%' OR cognome LIKE '%?%' OR codice_fiscale LIKE '%?%'</find>
+    </query>
+
+    <query id="contratto">
+        <insert>INSERT INTO contratto VALUES(DEFAULT, '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?')</insert>
+        <read>SELECT numero_contratto, agenzia, auto, optional, dataInizio, dataFine, cliente, acconto, agenzia, chilometraggio, chilometriPercorsi, tariffaBase, tariffaFinale, stato, chilometriPrevisti FROM contratti WHERE numero_contratto = '?'</read>
+        <update>UPDATE contratti SET agenzia = '?', auto = '?', optional = '?', dataInizio = '?', dataFine = '?', cliente = '?', acconto = '?', agenzia = '?', chilometraggio = '?', chilometriPercorsi = '?', tariffaBase = '?', tariffaFinale = '?', stato = '?', chilometriPrevisti = '?' WHERE numero_contratto = '?'</update>
+        <!--delete></delete!-->
+        <readall>SELECT numero_contratto, agenzia, auto, optional, dataInizio, dataFine, cliente, acconto, agenzia, chilometraggio, chilometriPercorsi, tariffaBase, tariffaFinale, stato, chilometriPrevisti FROM contratti</readall>
+        <find>SELECT numero_contratto, agenzia, auto, optional, dataInizio, dataFine, cliente, acconto, agenzia, chilometraggio, chilometriPercorsi, tariffaBase, tariffaFinale, stato, chilometriPrevisti FROM contratti WHERE numero_contratto LIKE '%?%' </find>
+    </query>
+
+    <query id="dipendente">
+        <insert>INSERT INTO dipendenti VALUES(DEFAULT, '?', '?', '?', '?', '?', '?', '?', '?')</insert>
+        <read>SELECT id_dipendente, nome, cognome, email, telefono, citta, indirizzo, codice_fiscale, agenzia FROM dipendenti WHERE id_dipendente = '?'</read>
+        <update>UPDATE dipendenti SET nome = '?', cognome = '?', email = '?', telefono = '?', citta = '?', indirizzo = '?', codice_fiscale = '?', agenzia = '?' WHERE id_dipendente = '?'</update>
+        <delete>DELETE FROM dipendenti WHERE id_dipendente = '?'</delete>
+        <readall>SELECT id_dipendente, nome, cognome, email, telefono, citta, indirizzo, codice_fiscale, agenzia FROM dipendenti</readall>
+        <find>SELECT id_dipendente, nome, cognome, email, telefono, citta, indirizzo, codice_fiscale, agenzia FROM dipendenti WHERE nome LIKE '%?%' OR cognome LIKE '%?%' OR codice_fiscale LIKE '%?%'</find>
+    </query>
+
+    <query id="fascia">
+        <!--insert></insert!-->
+        <read>SELECT nome, prezzoKm, prezzoGg, descrizione FROM fasce WHERE nome='?'</read>
+        <update>UPDATE fasce SET prezzoKm = '?', prezzoGg = '?', descrizione = '?' WHERE nome = '?'</update>
+        <!--delete></delete!-->
+        <readall>SELECT nome, prezzoKm, prezzoGg, descrizione FROM fasce</readall>
+        <!--find></find!-->
+    </query>
+
+    <query id="ditta">
+        <!--insert></insert!-->
+        <read>SELECT partita_iva, ragione_sociale, citta, indirizzo, sito_web, email FROM ditta</read>
+        <update>UPDATE SET partita_iva = '?', ragione_sociale = '?', citta = '?', indirizzo = '?', sito_web = '?', email = '?' WHERE partita_iva = '?'</update>
+        <!--delete></delete!-->
+        <!--readall></readall!-->
+        <!--find></find!-->
+    </query>
+
+    <query id="optional">
+        <insert>INSERT INTO optional VALUES (DEFAULT, '?', '?', '?', '?')</insert>
+        <read>SELECT id, nome, prezzo, descrizione, stato FROM optional WHERE id = '?'</read>
+        <update>UPDATE optional SET nome = '?', prezzo = '?', descrizione = '?', stato = '?' WHERE id = '?'</update>
+        <delete>DELETE FROM optional WHERE id = '?'</delete>
+        <readall>SELECT id, nome, prezzo, descrizione, stato FROM optional</readall>
+        <find>SELECT id, nome, prezzo, descrizione, stato FROM optional WHERE nome LIKE '%?%'</find>
+        <readall_stato>SELECT id_optional, nome, prezzo, descrizione, stato FROM optional WHERE stato = '?'</readall_stato>
+    </query>
+
+    <query id="fattura">
+        <insert>INSERT INTO fatture VALUES(DEFAULT, '?', '?', '?', '?', '?', '?', '?')</insert>
+        <read>SELECT numero_fattura, agenzia, cliente, importo, stato, data, descrizione, contratto FROM fatture WHERE numero_fattura = '?'</read>
+        <!--update></update!-->
+        <!--delete></delete!-->
+        <readall>SELECT numero_fattura, agenzia, cliente, importo, stato, data, descrizione, contratto FROM fatture</readall>
+        <!--find></find!-->
+    </query>
+
+    <query id="prenotazione">
+        <insert>INSERT INTO prenotazioni VALUES(DEFAULT, '?', '?', '?', '?', '?', '?', '?')</insert>
+        <read>SELECT numero_prenotazione, cliente, auto, tipo, data, scadenza, agenzia, acconto FROM prenotazioni WHERE numero_prenotazione = '?'</read>
+        <update>UPDATE prenotazioni SET cliente = '?', auto = '?', tipo = '?', data = '?', scadenza = '?', agenzia = '?', acconto  = '?' WHERE numero_prenotazione = '?'</update>
+        <delete>DELETE FROM prenotazioni WHERE numero_prenotazione = '?'</delete>
+        <readall>SELECT numero_prenotazione, cliente, auto, tipo, data, scadenza, agenzia, acconto FROM prenotazioni</readall>
+        <!--find></find!-->
+    </query>
+
+</queries>

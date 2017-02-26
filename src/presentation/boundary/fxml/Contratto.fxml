@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.boundary.controller.ControllerContratto">
+   <children>
+      <FlowPane alignment="CENTER" maxHeight="-Infinity" prefHeight="60.0" style="-fx-background-color: #212121;">
+         <children>
+            <Text fx:id="titolo" fill="WHITESMOKE" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Titolo">
+               <font>
+                  <Font size="28.0" />
+               </font>
+               <FlowPane.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </FlowPane.margin>
+            </Text>
+         </children>
+      </FlowPane>
+      <GridPane>
+         <children>
+            <Label text="Agenzia ritiro" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Label text="Cliente" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+            <Label text="Auto" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label text="Agenzia Restituzione" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <ChoiceBox fx:id="agenziaRestChoiceBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <Label text="Chilometraggio" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="kmPercorsiTextField" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="170.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="agenziaTextField" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="150.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Stato" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Label text="Data Ritiro" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label text="Data Restituzione" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <DatePicker fx:id="dataRestDatePicker" prefWidth="120.0" promptText="gg/mm/aaaa" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets right="80.0" />
+               </GridPane.margin></DatePicker>
+            <Label text="Chilometri Percorsi" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <Label text="Informazioni di base" textFill="#2379c6" GridPane.columnIndex="1" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
+            <Label text="Durata" textFill="#2379c6" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Separator prefWidth="200.0" GridPane.columnIndex="3" GridPane.valignment="BOTTOM" />
+            <Label text="Numero Contratto" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="idTextField" editable="false" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="150.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Stato e Chiusura" textFill="#2379c6" GridPane.columnIndex="3" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Separator prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
+            <Label text="Calcolo Costi" textFill="#2379c6" GridPane.columnIndex="3" GridPane.rowIndex="6" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Separator prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="6" GridPane.valignment="BOTTOM" />
+            <Separator prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3" GridPane.valignment="TOP" />
+            <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="9" GridPane.valignment="TOP" />
+            <Separator prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="9" GridPane.valignment="TOP" />
+            <Separator prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="6" GridPane.valignment="TOP" />
+            <ChoiceBox fx:id="clienteChoiceBox" prefWidth="170.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+            <ChoiceBox fx:id="autoChoiceBox" prefWidth="170.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
+            <DatePicker fx:id="dataRitiroDatePicker" prefWidth="120.0" promptText="gg/mm/aaaa" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets right="80.0" />
+               </GridPane.margin>
+            </DatePicker>
+            <TextField fx:id="minutiRestTextField" maxWidth="35.0" promptText="mm" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+            <TextField fx:id="oraRestTextField" maxWidth="35.0" promptText="hh" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets right="40.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="oraRitiroTextField" maxWidth="35.0" promptText="hh" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets right="40.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="minutiRitiroTextField" maxWidth="35.0" promptText="mm" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+            <ChoiceBox fx:id="chilometraggioChoiceBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
+            <ChoiceBox fx:id="statoChoiceBox" prefWidth="150.0" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+            <Label text="Optional" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <SplitMenuButton fx:id="optionalSplitMenuButton" maxWidth="150.0" mnemonicParsing="false" text="n. item selected" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="8">
+            </SplitMenuButton>
+            <Label text="Chilometri Previsti" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField fx:id="kmPrevistiTextField" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets left="150.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="tarBaseTextField" GridPane.columnIndex="3" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets left="120.0" right="70.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="tarFinaleTextField" GridPane.columnIndex="3" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets left="120.0" right="70.0" />
+               </GridPane.margin>
+            </TextField>
+            <Button fx:id="tarBaseButton" mnemonicParsing="false" text="Calcola" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="7" />
+            <Button fx:id="tarFinaleButton" mnemonicParsing="false" text="Calcola" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="8" />
+            <Label text="Tariffa Base" GridPane.columnIndex="3" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Label>
+            <Label text="Tariffa Finale" GridPane.columnIndex="3" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Label>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" prefWidth="50.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="300.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="40.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="320.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="50.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="40.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Separator prefWidth="200.0" />
+      <HBox alignment="CENTER_RIGHT" prefHeight="80.0" spacing="10.0">
+         <children>
+            <Button fx:id="esportaButton" cancelButton="true" mnemonicParsing="false" text="Esporta">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="stampaButton" cancelButton="true" mnemonicParsing="false" text="Stampa">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="modificaButton" cancelButton="true" mnemonicParsing="false" text="Modifica">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Separator fx:id="separator" maxHeight="50.0" orientation="VERTICAL">
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+            </Separator>
+            <Button fx:id="annullaButton" cancelButton="true" mnemonicParsing="false" text="Annulla">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="confermaButton" defaultButton="true" mnemonicParsing="false" text="Conferma">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="5.0" right="30.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>

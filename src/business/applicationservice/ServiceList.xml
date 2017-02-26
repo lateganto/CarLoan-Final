@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<services>
+
+    <service id="login">
+        <class>ASUtente</class>
+        <method>login</method>
+    </service>
+
+    <service id="readDipendente">
+        <class>ASDipendente</class>
+        <method>read</method>
+    </service>
+
+    <service id="insertCliente">
+        <class>ASCliente</class>
+        <method>create</method>
+    </service>
+
+    <service id="updateCliente">
+        <class>ASCliente</class>
+        <method>update</method>
+    </service>
+
+    <service id="findCliente">
+        <class>ASCliente</class>
+        <method>find</method>
+    </service>
+
+    <service id="readAllClienti">
+        <class>ASCliente</class>
+        <method>readAll</method>
+    </service>
+
+    <service id="readCliente">
+        <class>ASCliente</class>
+        <method>read</method>
+    </service>
+
+    <service id="readAllAgenzie">
+        <class>ASAgenzia</class>
+        <method>readAll</method>
+    </service>
+
+    <service id="readAllAutoAgenzia">
+        <class>ASAuto</class>
+        <method>readAll</method>
+    </service>
+
+    <service id="readAllOptional">
+        <class>ASOptional</class>
+        <method>readAll</method>
+    </service>
+
+    <service id="insertPrenotazione">
+        <class>ASPrenotazione</class>
+        <method>create</method>
+    </service>
+
+    <service id="findPrenotazione">
+        <class>ASPrenotazione</class>
+        <method>find</method>
+    </service>
+
+    <service id="readAllPrenotazione">
+        <class>ASPrenotazione</class>
+        <method>readAll</method>
+    </service>
+
+    <service id="readPrenotazione">
+        <class>ASPrenotazione</class>
+        <method>read</method>
+    </service>
+
+    <service id="deletePrenotazione">
+        <class>ASPrenotazione</class>
+        <method>delete</method>
+    </service>
+
+    <service id="insertFattura">
+        <class>ASFattura</class>
+        <method>insert</method>
+    </service>
+
+    <service id="findFattura">
+        <class>ASFattura</class>
+        <method>find</method>
+    </service>
+
+    <service id="readAllFattura">
+        <class>ASFattura</class>
+        <method>readAll</method>
+    </service>
+
+    <service id="readFattura">
+        <class>ASFattura</class>
+        <method>read</method>
+    </service>
+
+</services>

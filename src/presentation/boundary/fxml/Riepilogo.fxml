@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="secondPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="620.0" spacing="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.boundary.controller.ControllerRiepilogo">
+   <children>
+      <FlowPane alignment="CENTER_RIGHT" columnHalignment="RIGHT" hgap="10.0" prefWrapLength="260.0">
+         <children>
+            <TextField fx:id="searchField" promptText="Cerca Item">
+               <FlowPane.margin>
+                  <Insets />
+               </FlowPane.margin>
+            </TextField>
+            <Button alignment="CENTER_RIGHT" defaultButton="true" mnemonicParsing="false" onAction="#onCerca" text="Cerca">
+               <graphic>
+                  <ImageView fitHeight="12.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/search.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <FlowPane.margin>
+                  <Insets right="10.0" />
+               </FlowPane.margin>
+            </Button>
+         </children>
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin>
+      </FlowPane>
+      <ToolBar fx:id="toolBar">
+         <items>
+            <Button fx:id="buttonNuovo" mnemonicParsing="false" onAction="#onNuovo" text="Nuovo" />
+            <Button fx:id="buttonModifica" mnemonicParsing="false" onAction="#onModifica" text="Modifica" />
+            <Button fx:id="buttonRimuovi" mnemonicParsing="false" text="Rimuovi" />
+            <Separator orientation="VERTICAL">
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </Separator>
+            <Button fx:id="buttonDettagli" mnemonicParsing="false" onAction="#onMostraDettagli" text="Mostra Dettagli" />
+         </items>
+      </ToolBar>
+      <TableView fx:id="table" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" />
+         </VBox.margin>
+      </TableView>
+   </children>
+</VBox>

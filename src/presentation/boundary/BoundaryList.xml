@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<boundaries>
+    
+    <boundary id="showHome">SchermataHome</boundary>
+    <boundary id="showBackToHome">SchermataBackHome</boundary>
+
+    <boundary id="showModificaProfilo">SchermataModificaProfilo</boundary>
+
+
+
+
+
+    <boundary id="showRiepilogoContratti">SchermataRiepilogoContratti</boundary>
+    <boundary id="showRiepilogoPrenotazioni">SchermataRiepilogoPrenotazioni</boundary>
+    <boundary id="showRiepilogoAuto">SchermataRiepilogoAuto</boundary>
+    <boundary id="showRiepilogoClienti">SchermataRiepilogoClienti</boundary>
+    <boundary id="showRiepilogoFatture">SchermataRiepilogoFatture</boundary>
+
+
+
+    <boundary id="showNuovoContratto">SchermataNuovoContratto</boundary>
+    <boundary id="showModificaContratto">SchermataModificaContratto</boundary>
+
+
+    <boundary id="showNuovoPrenotazione">SchermataNuovoPrenotazione</boundary>
+    <boundary id="showDettagliPrenotazione">SchermataDettagliPrenotazione</boundary>
+
+    <boundary id="showNuovoFattura">SchermataNuovoFattura</boundary>
+    <boundary id="showDettagliFattura">SchermataDettagliFattura</boundary>
+
+    <boundary id="showNuovoCliente">SchermataNuovoCliente</boundary>
+    <boundary id="showModificaCliente">SchermataModificaCliente</boundary>
+    <boundary id="showDettagliCliente">SchermataDettagliCliente</boundary>
+
+</boundaries>
